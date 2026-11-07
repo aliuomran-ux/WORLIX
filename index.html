@@ -18,40 +18,91 @@ button,input{font:inherit}button{cursor:pointer;color:inherit}.wrap{width:min(11
 body[data-mood="prosperous"]{--mood-a:#253b70;--mood-b:#124b4b}body[data-mood="stable"]{--mood-a:#211653;--mood-b:#081d35}body[data-mood="unrest"]{--mood-a:#542348;--mood-b:#311d49}body[data-mood="collapse"]{--mood-a:#4b182d;--mood-b:#25111c}body[data-mood="recovery"]{--mood-a:#174a46;--mood-b:#172b50}
 @media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:35px;gap:0}.hero-copy{text-align:center}.hero-copy p{margin:auto}.actions{justify-content:center}.globe-stage{height:370px}.grid.three{grid-template-columns:1fr 1fr}.nav{display:none}.grid.two{grid-template-columns:1fr}}
 @media(max-width:520px){.wrap{width:min(100% - 24px,1180px)}.topbar{padding:13px 0}.hero-copy h1{font-size:48px}.globe-stage{height:320px}.globe{width:260px}.orbit{width:320px;height:120px}.orbit.two{width:300px;height:140px}.tag-a{right:-3px;top:25px}.tag-b{left:-3px;bottom:20px}.grid.three{grid-template-columns:1fr}.section{padding:25px 0}.card{padding:16px}.admin-grid{grid-template-columns:1fr}}
+
+/* WORLIX cinematic shared-world home layout */
+.header-actions{display:flex;align-items:center;gap:12px}.solo-top{padding:10px 15px;border:1px solid #ffd47a77;background:linear-gradient(110deg,#ffe09a,#ffb85f);color:#21152b;box-shadow:0 0 24px #ffc65b33;font-size:12px;white-space:nowrap}
+.world-hero{position:relative;display:grid;grid-template-columns:minmax(205px,1fr) minmax(340px,1.35fr) minmax(205px,1fr);grid-template-rows:auto 1fr auto;gap:12px 20px;align-items:center;padding:18px 0 10px;min-height:570px}
+.hero-heading{grid-column:1/-1;text-align:center;z-index:2}.hero-heading h1{font-size:clamp(34px,4.6vw,57px);line-height:1.02;letter-spacing:-.055em;margin:9px 0}.hero-heading h1 span{background:linear-gradient(90deg,#a99aff,#67e8f2,#ffe09a);-webkit-background-clip:text;background-clip:text;color:transparent}.hero-heading p{color:#c0bdd8;margin:0;font-size:14px}
+.hero-panel{position:relative;z-index:3;align-self:center;min-width:0;padding:17px 16px;border:1px solid #a99bff35;border-radius:20px;background:linear-gradient(145deg,#211c48dd,#111329e8);box-shadow:0 16px 55px #03020d99,inset 0 1px #ffffff14;backdrop-filter:blur(18px);overflow:hidden}
+.hero-panel:before{content:"";position:absolute;inset:-1px;background:linear-gradient(130deg,#9c83ff12,transparent 42%,#53e5f212);pointer-events:none}
+.pulse-panel{grid-column:1;grid-row:2}.collective-panel{grid-column:3;grid-row:2}
+.panel-kicker{display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.16em;color:#bcb4ff;font-weight:800;margin-bottom:15px}.live-beacon,.caption-dot{width:7px;height:7px;border-radius:50%;background:#70f0bd;box-shadow:0 0 12px #70f0bd;display:inline-block}
+.panel-stat{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin:10px 0 3px;font-size:11px;color:#c5c0e0}.panel-stat strong{font-size:19px;color:#fff;white-space:nowrap}.panel-stat strong small{font-size:9px;color:#aaa7c8;margin-left:3px}.hero-panel p{font-size:11px;line-height:1.4;color:#aaa7c8;margin:4px 0 12px}.energy-track{height:5px;border-radius:20px;background:#ffffff13;overflow:hidden}.energy-track i{display:block;height:100%;border-radius:20px;background:linear-gradient(90deg,#9c7bff,#ffcf78);box-shadow:0 0 12px #a78bfa88}.energy-track.cyan i{background:linear-gradient(90deg,#4dcae5,#83f2c0);box-shadow:0 0 12px #63e7f288}.demo-caption{display:block;margin-top:13px;font-size:8px;letter-spacing:.13em;color:#777493}
+.globe-stage{grid-column:2;grid-row:2;height:405px;min-width:0;transform:translateY(-5px)}.globe{width:min(75vw,330px)}.globe-halo{width:min(100%,420px);background:radial-gradient(circle,#8b65ff42 0,#4cd8ef18 42%,transparent 69%);filter:blur(20px);animation:haloPulse 5s ease-in-out infinite}.energy-ring{position:absolute;width:370px;height:370px;border:1px solid #6de9ff30;border-radius:50%;box-shadow:0 0 24px #63e7f20b,inset 0 0 24px #63e7f20b}.ring-a{transform:scaleY(.29) rotate(-22deg);animation:ringBreath 4s ease-in-out infinite}.ring-b{width:395px;height:395px;border-color:#ffd47a30;transform:scaleY(.22) rotate(35deg);animation:ringBreath 5s ease-in-out infinite reverse}.globe:after{content:"";position:absolute;inset:0;border-radius:50%;background:linear-gradient(115deg,transparent 34%,#c5fbff1b 48%,transparent 62%);transform:translateX(-100%);animation:planetShimmer 8s ease-in-out infinite}.city.c4{left:64%;top:27%;width:5px;height:5px}.city.c5{left:25%;top:62%;width:5px;height:5px}.planet-cloud{position:absolute;inset:15% 3%;border-radius:50%;background:repeating-linear-gradient(165deg,transparent 0 29px,#d4ffff12 30px 33px,transparent 35px 58px);filter:blur(2px);transform:rotate(-18deg);pointer-events:none}.globe-caption{position:absolute;bottom:0;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:.2em;color:#b8b2e9;white-space:nowrap;display:flex;align-items:center;gap:8px}.hero-bottomline{grid-column:1/-1;display:flex;justify-content:space-between;padding:4px 5px;color:#77749e;font-size:9px;letter-spacing:.15em}.collective-orb{width:64px;height:64px;margin:0 auto 12px;border-radius:50%;display:grid;place-content:center;text-align:center;background:radial-gradient(circle at 35% 25%,#6ce9f1,#5544a8 55%,#17142f 78%);box-shadow:0 0 0 7px #7d6aff12,0 0 35px #6a65ff77,inset -8px -8px 16px #090b2b}.collective-orb span{font-size:22px;color:white;line-height:1}.collective-orb small{font-size:7px;letter-spacing:.14em}.collective-panel .panel-stat strong{font-size:22px}.collective-divider{height:1px;background:linear-gradient(90deg,transparent,#9b8cff55,transparent);margin:13px 0}.signal-row{display:flex;gap:9px;align-items:center;margin:10px 0}.signal-icon{width:29px;height:29px;border-radius:9px;background:#9c83ff1d;display:grid;place-items:center}.signal-row b,.signal-row small{display:block}.signal-row b{font-size:10px}.signal-row small{font-size:9px;color:#aaa7c8}
+#community.section{padding:15px 0 32px}.daily-layout{grid-template-columns:minmax(0,1.45fr) minmax(240px,.75fr);align-items:stretch}.decision-card{position:relative;overflow:hidden;background:linear-gradient(145deg,#29204fef,#14152feF);border-color:#9b8cff55;box-shadow:0 18px 65px #4c36a52a,inset 0 1px #ffffff18}.decision-glow{position:absolute;width:270px;height:270px;right:-100px;top:-130px;border-radius:50%;background:#8e75ff25;filter:blur(20px);pointer-events:none}.decision-label{font-size:9px;letter-spacing:.17em;color:#ffe09a;font-weight:800}.decision-card h3{font-size:21px;margin-top:5px}.decision-card #communityPrompt{font-size:14px;color:#d0cbea;max-width:650px}.decision-card .choice-list{position:relative;max-height:245px;overflow-y:auto;padding:2px 5px 4px 0;scrollbar-width:thin;scrollbar-color:#806de8 #ffffff0c}.decision-card .choice{min-height:58px;background:#ffffff0a;border-color:#aaa0ff2b}.decision-card .choice:first-of-type{border-color:#69e5ef99;background:linear-gradient(100deg,#5bddeb18,#ffffff08);box-shadow:inset 3px 0 #63e7f2,0 0 20px #63e7f20b}.choice-scroll-hint{order:99;text-align:center;color:#8d89b3;font-size:8px;letter-spacing:.12em;padding:8px}.collective-detail{background:linear-gradient(145deg,#171b3b,#111329)}.collective-detail .metric{font-size:32px}.collective-detail .notice{font-size:10px}.collective-detail #communityResult{min-height:38px;font-size:12px}
+@keyframes haloPulse{50%{opacity:.65;transform:scale(1.08)}}@keyframes ringBreath{50%{opacity:.45;filter:blur(1px)}}@keyframes planetShimmer{0%,35%{transform:translateX(-100%)}65%,100%{transform:translateX(100%)}}
+@media(max-width:850px){.world-hero{grid-template-columns:minmax(160px,1fr) minmax(260px,1.25fr) minmax(160px,1fr);gap:10px;min-height:510px}.hero-panel{padding:13px 11px}.globe-stage{height:350px}.energy-ring{width:310px;height:310px}.ring-b{width:335px;height:335px}.panel-stat{font-size:10px}.panel-stat strong{font-size:16px}}
+@media(max-width:650px){.topbar{gap:8px}.header-actions{gap:7px}.header-actions .status-pill{font-size:0;padding:7px}.header-actions .status-pill .pulse-dot{width:8px;height:8px}.solo-top{font-size:10px;padding:9px 10px}.world-hero{grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto auto;gap:9px;padding-top:13px;min-height:0}.hero-heading{grid-column:1/-1;grid-row:1}.hero-heading h1{font-size:34px}.hero-heading p{font-size:12px}.globe-stage{grid-column:1/-1;grid-row:2;height:300px;transform:none}.globe{width:235px}.orbit{width:290px;height:110px}.orbit.two{width:270px;height:130px}.energy-ring{width:275px;height:275px}.ring-b{width:295px;height:295px}.pulse-panel{grid-column:1;grid-row:3}.collective-panel{grid-column:2;grid-row:3}.hero-panel{padding:12px 10px;border-radius:15px}.panel-kicker{font-size:8px;margin-bottom:9px}.panel-stat{font-size:9px;margin:7px 0 2px}.panel-stat strong{font-size:15px}.hero-panel p{font-size:9px;margin-bottom:8px}.collective-orb{width:47px;height:47px}.collective-orb span{font-size:17px}.signal-row{gap:6px;margin:7px 0}.signal-icon{width:24px;height:24px}.signal-row b{font-size:9px}.signal-row small{font-size:8px}.demo-caption{font-size:7px;margin-top:9px}.hero-bottomline{font-size:7px;letter-spacing:.08em}.daily-layout{grid-template-columns:1fr}.decision-card h3{font-size:18px}.decision-card .choice-list{max-height:185px}.section-head h2{font-size:21px}}
+
 </style>
 </head>
 <body data-mood="stable">
 <div class="wrap">
 <header class="topbar">
 <a class="brand" href="#"><span class="brand-mark">◉</span><span><strong>WORLIX</strong><small>ONE WORLD. INFINITE EXPERIMENTS.</small></span></a>
-<nav class="nav"><a href="#pulse">World Pulse</a><a href="#solo">Solo World</a><a href="#community">Community</a><a href="#news">Live News</a><a href="#admin">Admin</a></nav>
-<span class="status-pill"><i class="pulse-dot"></i><span id="connectionLabel">WORLD SIMULATION</span></span>
+<nav class="nav"><a href="#community">World Pulse</a><a href="#solo">Solo World</a><a href="#community">Community</a><a href="#news">Live News</a><a href="#admin">Admin</a></nav>
+<div class="header-actions"><a class="btn solo-top" href="#solo">⚡ SOLO WORLD</a><span class="status-pill"><i class="pulse-dot"></i><span id="connectionLabel">WORLD SIMULATION</span></span></div>
 </header>
 
 <main>
-<section class="hero">
-<div class="hero-copy">
-<span class="eyebrow">✦ A living world shaped by you</span>
-<h1>One World.<br><span>Infinite Experiments.</span></h1>
-<p>Every choice leaves a mark. Build, protect, disrupt or rebuild. Enter a world that remembers what its people do — and discovers what comes next.</p>
-<div class="actions"><a class="btn primary" href="#community">🌐 Enter the Community</a><a class="btn" href="#solo">⚡ Start Solo Journey</a></div>
-<div class="micro">No account needed to begin your solo experiment.</div>
+<section class="hero world-hero">
+<div class="hero-heading">
+  <span class="eyebrow">✦ ONE PLANET · SHARED CONSEQUENCES</span>
+  <h1>One World. <span>Infinite Experiments.</span></h1>
+  <p>One living world. Every collective decision leaves a mark.</p>
 </div>
+<aside class="hero-panel pulse-panel">
+  <div class="panel-kicker">WORLD PULSE <span class="live-beacon"></span></div>
+  <div class="panel-stat"><span>World condition</span><strong class="mood-label" id="moodText">Stable</strong></div>
+  <p id="moodDescription">The world is holding its balance. Its next chapter is unwritten.</p>
+  <div class="panel-stat"><span>Resilience</span><strong id="resilience">68<small>/100</small></strong></div>
+  <div class="energy-track"><i id="resilienceBar" style="width:68%"></i></div>
+  <div class="panel-stat"><span>Harmony</span><strong id="harmony">54<small>/100</small></strong></div>
+  <div class="energy-track cyan"><i id="harmonyBar" style="width:54%"></i></div>
+  <span class="demo-caption">DEMO INDICATORS · NOT LIVE DATA</span>
+</aside>
 <div class="globe-stage" aria-label="Illustrated glowing planet">
-<div class="globe-halo"></div><div class="orbit"></div><div class="orbit two"></div>
-<div class="globe"><i class="land one"></i><i class="land two"></i><i class="land three"></i><i class="city c1"></i><i class="city c2"></i><i class="city c3"></i></div>
-<div class="float-tag tag-a">WORLD STATUS <b id="heroMood">STABLE</b></div><div class="float-tag tag-b">✧ <b id="heroPulse">Awaiting signals</b></div>
+  <div class="globe-halo"></div>
+  <div class="energy-ring ring-a"></div><div class="energy-ring ring-b"></div>
+  <div class="orbit"></div><div class="orbit two"></div>
+  <div class="globe">
+    <i class="land one"></i><i class="land two"></i><i class="land three"></i>
+    <i class="city c1"></i><i class="city c2"></i><i class="city c3"></i>
+    <i class="city c4"></i><i class="city c5"></i><i class="planet-cloud"></i>
+  </div>
+  <div class="float-tag tag-a">WORLD STATUS <b id="heroMood">STABLE</b></div>
+  <div class="float-tag tag-b">✧ <b id="heroPulse">Awaiting signals</b></div>
+  <div class="globe-caption"><span class="caption-dot"></span> THE SHARED WORLD</div>
+</div>
+<aside class="hero-panel collective-panel">
+  <div class="panel-kicker">COLLECTIVE SIGNALS <span>◉</span></div>
+  <div class="collective-orb"> <span>◈</span><small>ONE WORLD</small></div>
+  <div class="panel-stat"><span>Verified participants</span><strong id="participantCount">—</strong></div>
+  <p>People shaping today's world decision.</p>
+  <div class="collective-divider"></div>
+  <div class="signal-row"><span class="signal-icon">⚡</span><span><b>Daily decision</b><small>One choice. Shared consequences.</small></span></div>
+  <div class="signal-row"><span class="signal-icon">🌐</span><span><b>Global impact</b><small id="communityResult">No verified votes loaded.</small></span></div>
+  <span class="demo-caption" id="dataMode">WAITING FOR LIVE DATA</span>
+</aside>
+<div class="hero-bottomline"><span>✦ A WORLD THAT REMEMBERS</span><span>YOUR CHOICE CHANGES THE STORY</span></div>
+</section>
+
+<section id="community" class="section">
+<div class="section-head"><div><span class="eyebrow">01 / TODAY’S TURNING POINT</span><h2>THE DAILY WORLD DECISION</h2><p>One question for everyone. The outcome becomes part of our shared history.</p></div><span class="tag" id="voteStatus">BACKEND NOT CONNECTED</span></div>
+<div class="grid two daily-layout">
+<div class="card decision-card"><div class="decision-glow"></div><div class="card-top"><div><span class="decision-label">⚖ GLOBAL CHOICE</span><h3>Today’s world decision</h3><p id="communityPrompt">The world's energy network is failing. What should humanity prioritise?</p></div><span class="icon">⚖️</span></div>
+<div class="choice-list" id="communityChoices"><div class="choice-scroll-hint">CHOOSE THE FIRST OPTION OR SCROLL TO EXPLORE ALL PATHS ↓</div>
+<button class="choice" data-vote="renew"><span>☀️ Rebuild with clean energy<small>Safer future, slower immediate recovery.</small></span><span class="risk">Constructive</span></button>
+<button class="choice" data-vote="extract"><span>⛏️ Extract emergency resources<small>Fast supply, long-term ecological damage.</small></span><span class="risk">Risky</span></button>
+<button class="choice" data-vote="ration"><span>💧 Enforce a global ration plan<small>Protect reserves, strain public trust.</small></span><span class="risk">Difficult</span></button>
+</div>
+<p class="muted" id="voteMessage">Connect Supabase and apply the SQL setup before real voting is enabled. These choices are previews only.</p>
+</div>
+<div class="card collective-detail"><div class="card-top"><h3>WORLDWIDE RESPONSE</h3><span class="icon">📡</span></div><div class="metric" id="participantCount">— <small>verified participants</small></div><p>Participant totals appear only when returned by the database.</p><div class="bar"><span id="communityBar" style="width:0%"></span></div><div id="communityResult" class="muted">No verified votes loaded.</div><div class="notice">No fabricated votes, player counts or global outcomes are displayed. Demo indicators above are clearly labelled illustrative.</div></div>
 </div>
 </section>
 
-<section id="pulse" class="section">
-<div class="section-head"><div><span class="eyebrow">01 / World intelligence</span><h2>WORLD PULSE</h2><p>A snapshot of the shared world's current condition.</p></div><span class="tag" id="dataMode">DEMO MODE · NOT LIVE DATA</span></div>
-<div class="grid three">
-<div class="card"><div class="card-top"><div><p>Global condition</p><div class="metric mood-label" id="moodText">Stable</div></div><span class="icon">🌎</span></div><p id="moodDescription">The world is holding its balance. Its next chapter is unwritten.</p></div>
-<div class="card"><div class="card-top"><div><p>World resilience</p><span class="metric" id="resilience">68<small> / 100</small></span></div><span class="icon">🛡️</span></div><div class="bar"><span id="resilienceBar" style="width:68%"></span></div><p>Illustrative starting value until Supabase is connected.</p></div>
-<div class="card"><div class="card-top"><div><p>World harmony</p><span class="metric" id="harmony">54<small> / 100</small></span></div><span class="icon">✨</span></div><div class="bar"><span id="harmonyBar" style="width:54%"></span></div><p>Shared indicators will be authoritative after backend setup.</p></div>
-</div>
-</section>
+
 
 <section id="solo" class="section">
 <div class="section-head"><div><span class="eyebrow">02 / Your private timeline</span><h2>SOLO WORLD</h2><p>Your own evolving experiment, saved on this device.</p></div><span class="tag">LOCAL SAVE</span></div>
@@ -67,20 +118,7 @@ body[data-mood="prosperous"]{--mood-a:#253b70;--mood-b:#124b4b}body[data-mood="s
 </div>
 </section>
 
-<section id="community" class="section">
-<div class="section-head"><div><span class="eyebrow">03 / One shared destiny</span><h2>WORLD COMMUNITY</h2><p>One daily decision per player. The collective outcome shapes the world.</p></div><span class="tag" id="voteStatus">BACKEND NOT CONNECTED</span></div>
-<div class="grid two">
-<div class="card"><div class="card-top"><div><h3>Today's world decision</h3><p id="communityPrompt">The world's energy network is failing. What should humanity prioritise?</p></div><span class="icon">⚖️</span></div>
-<div class="choice-list" id="communityChoices">
-<button class="choice" data-vote="renew"><span>☀️ Rebuild with clean energy<small>Safer future, slower immediate recovery.</small></span><span class="risk">Constructive</span></button>
-<button class="choice" data-vote="extract"><span>⛏️ Extract emergency resources<small>Fast supply, long-term ecological damage.</small></span><span class="risk">Risky</span></button>
-<button class="choice" data-vote="ration"><span>💧 Enforce a global ration plan<small>Protect reserves, strain public trust.</small></span><span class="risk">Difficult</span></button>
-</div>
-<p class="muted" id="voteMessage">Connect Supabase and apply the SQL setup before real voting is enabled. These choices are previews only.</p>
-</div>
-<div class="card"><div class="card-top"><h3>Collective signals</h3><span class="icon">📡</span></div><div class="metric" id="participantCount">— <small>verified participants</small></div><p>Participant totals appear only when returned by the database.</p><div class="bar"><span id="communityBar" style="width:0%"></span></div><div id="communityResult" class="muted">No verified votes loaded.</div><div class="notice">No fabricated votes, player counts or global outcomes are displayed. Demo indicators above are clearly labelled illustrative.</div></div>
-</div>
-</section>
+
 
 <section id="news" class="section">
 <div class="section-head"><div><span class="eyebrow">04 / Signals from the world</span><h2>WORLD LIVE NEWS</h2><p>Fictional in-world reports. Real community outcomes will be labelled when connected.</p></div><span class="tag">FICTIONAL WORLD FEED</span></div>
