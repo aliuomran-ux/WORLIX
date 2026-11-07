@@ -1,1 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#100d25">
+<meta name="description" content="WORLIX — One World. Infinite Experiments. A living world shaped by its visitors.">
+<title>WORLIX — One World. Infinite Experiments.</title>
+<style>
+:root{--bg:#0c0b1b;--panel:rgba(24,22,52,.78);--panel2:rgba(35,31,72,.82);--line:rgba(174,164,255,.18);--text:#f5f3ff;--muted:#aaa7c8;--cyan:#63e7f2;--violet:#a78bfa;--gold:#ffd47a;--green:#75e2a4;--red:#ff718c;--mood-a:#211653;--mood-b:#081d35;--shadow:0 22px 70px #03020d88}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(ellipse at 50% -15%,var(--mood-a),transparent 55%),radial-gradient(ellipse at 100% 40%,var(--mood-b),transparent 45%),var(--bg);min-height:100vh;overflow-x:hidden;transition:background 1.2s ease}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.2;background-image:radial-gradient(#fff 0.7px,transparent .7px);background-size:44px 44px;mask-image:linear-gradient(to bottom,#000,transparent 80%)}
+button,input{font:inherit}button{cursor:pointer;color:inherit}.wrap{width:min(1180px,calc(100% - 34px));margin:auto}.topbar{display:flex;align-items:center;justify-content:space-between;padding:19px 0;gap:16px;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--text)}.brand-mark{width:39px;height:39px;border-radius:13px;background:linear-gradient(145deg,#9a78ff,#54dff0);display:grid;place-items:center;box-shadow:0 0 28px #8b72ff66;font-size:21px}.brand strong{font-size:19px;letter-spacing:.18em}.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:.11em;margin-top:-3px}.nav{display:flex;gap:7px;flex-wrap:wrap}.nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px;font-size:13px}.nav a:hover{background:#ffffff10;color:white}.status-pill,.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:6px 11px;color:#d8d2ff;background:#ffffff08;font-size:11px;letter-spacing:.12em;text-transform:uppercase}.pulse-dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 12px var(--green)}.hero{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;padding:48px 0 35px;min-height:540px}.hero-copy h1{font-size:clamp(42px,6vw,76px);line-height:.98;letter-spacing:-.055em;margin:19px 0}.hero-copy h1 span{background:linear-gradient(90deg,#fff 10%,#a9a0ff 48%,#66e8f1);-webkit-background-clip:text;background-clip:text;color:transparent}.hero-copy p{max-width:550px;color:#c0bdd8;font-size:16px}.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:25px}.btn{border:1px solid var(--line);border-radius:13px;padding:12px 17px;background:#ffffff0b;font-weight:700;transition:.2s;display:inline-flex;align-items:center;gap:9px}.btn:hover{transform:translateY(-2px);border-color:#9b8cff88}.btn.primary{background:linear-gradient(110deg,#8665f5,#3bbfd2);border:0;color:#100d25;box-shadow:0 10px 30px #6c55e955}.btn.gold{background:linear-gradient(110deg,#ffe09a,#ffb85f);color:#24162b;border:0}.micro{color:var(--muted);font-size:12px;margin-top:13px}
+.globe-stage{height:420px;position:relative;display:grid;place-items:center;isolation:isolate}.globe-halo{position:absolute;width:min(95%,410px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#6d58d344,transparent 67%);filter:blur(15px)}.globe{width:min(80vw,340px);aspect-ratio:1;border-radius:50%;position:relative;overflow:hidden;background:radial-gradient(circle at 32% 27%,#a7f6ff 0 2%,#2878a8 17%,#173b78 42%,#10143f 69%,#080a24 100%);box-shadow:inset -24px -18px 38px #03051e, inset 9px 8px 24px #b3f7ff66,0 0 0 1px #a4eaff55,0 0 55px #5b77ff77,0 0 110px #5c4bd344;animation:float 7s ease-in-out infinite}
+.globe:before{content:"";position:absolute;inset:-5%;border-radius:50%;background:repeating-linear-gradient(0deg,transparent 0 34px,#9beaff20 35px 36px),repeating-linear-gradient(90deg,transparent 0 42px,#9beaff1c 43px 44px);transform:rotate(-17deg);mask-image:radial-gradient(circle,#000 62%,transparent 70%)}
+.land{position:absolute;background:linear-gradient(145deg,#a4d99c,#397d78 55%,#22526d);filter:drop-shadow(0 3px 4px #020817);opacity:.94}.land.one{width:36%;height:30%;left:17%;top:22%;border-radius:58% 35% 48% 42%;transform:rotate(22deg);clip-path:polygon(10% 8%,70% 0,100% 30%,78% 57%,88% 80%,50% 100%,22% 73%,0 42%)}.land.two{width:19%;height:37%;left:37%;top:49%;border-radius:48%;transform:rotate(-16deg);clip-path:polygon(35% 0,90% 16%,100% 49%,63% 100%,22% 76%,0 35%)}.land.three{width:28%;height:22%;right:10%;top:27%;border-radius:50%;clip-path:polygon(0 32%,35% 0,80% 8%,100% 44%,70% 100%,20% 78%)}.city{position:absolute;width:7px;height:7px;border-radius:50%;background:#fff5bb;box-shadow:0 0 7px 3px #ffe38c99,0 0 20px 7px #ffe38c55}.city.c1{left:34%;top:37%}.city.c2{left:56%;top:57%}.city.c3{left:73%;top:39%}.orbit{position:absolute;width:420px;height:150px;border:1px solid #a9a0ff55;border-radius:50%;transform:rotate(-24deg);animation:orbit 16s linear infinite}.orbit:after{content:"";position:absolute;width:9px;height:9px;top:17px;left:57px;background:var(--cyan);border-radius:50%;box-shadow:0 0 15px var(--cyan)}.orbit.two{width:390px;height:175px;transform:rotate(57deg);animation-duration:23s;border-color:#ffd47a44}.float-tag{position:absolute;padding:8px 12px;border:1px solid var(--line);background:#171431cc;backdrop-filter:blur(10px);border-radius:12px;font-size:11px;box-shadow:var(--shadow)}.float-tag b{color:var(--cyan)}.tag-a{top:46px;right:0}.tag-b{bottom:43px;left:0}@keyframes float{50%{transform:translateY(-10px)}}@keyframes orbit{to{transform:rotate(336deg)}}
+.section{padding:34px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:17px}.section-head h2{font-size:25px;letter-spacing:-.03em;margin:5px 0}.section-head p{margin:0;color:var(--muted);font-size:13px}.grid{display:grid;gap:15px}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}.card{background:linear-gradient(145deg,var(--panel),#141329d9);border:1px solid var(--line);border-radius:19px;padding:20px;box-shadow:var(--shadow);backdrop-filter:blur(15px)}.card h3{margin:0 0 6px;font-size:17px}.card p{color:var(--muted);margin:4px 0 12px;font-size:13px}.card-top{display:flex;justify-content:space-between;gap:12px;align-items:center}.icon{width:38px;height:38px;border-radius:12px;background:#9e8cff1b;display:grid;place-items:center;font-size:19px}.metric{font-size:30px;font-weight:800;letter-spacing:-.04em}.metric small{font-size:11px;color:var(--muted);font-weight:500;letter-spacing:0}.bar{height:8px;border-radius:20px;background:#ffffff12;overflow:hidden;margin:10px 0}.bar span{height:100%;display:block;border-radius:20px;background:linear-gradient(90deg,var(--violet),var(--cyan));transition:width .5s}.mood-label{color:var(--gold);font-weight:700}.news-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}.news-item:last-child{border:0}.news-icon{font-size:20px}.news-item strong{font-size:13px}.news-item small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.choice-list{display:grid;gap:9px;margin-top:15px}.choice{width:100%;text-align:left;border:1px solid var(--line);border-radius:13px;padding:12px;background:#ffffff08;display:flex;justify-content:space-between;gap:12px}.choice:hover{border-color:var(--cyan);background:#65dff20e}.choice small{display:block;color:var(--muted);font-size:11px}.choice .risk{font-size:10px;color:var(--gold);white-space:nowrap}.notice{padding:11px 13px;border-radius:12px;background:#ffd47a12;border:1px solid #ffd47a33;color:#ffe1a2;font-size:12px;margin-top:12px}.muted{color:var(--muted)}.tag{font-size:10px;padding:4px 8px;border-radius:999px;background:#ffffff12;color:#d8d2ff}.leader{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}.leader:last-child{border:0}.avatar{width:32px;height:32px;border-radius:11px;background:linear-gradient(135deg,#7c65dc,#46bfc8);display:grid;place-items:center;font-weight:800}.leader span:nth-child(2){flex:1;font-size:13px}.leader small{display:block;color:var(--muted);font-size:10px}.leader b{font-size:12px;color:var(--gold)}.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{width:100%;padding:11px 12px;border-radius:10px;border:1px solid var(--line);background:#0e0d20;color:white;margin:5px 0 10px}.footer{padding:35px 0 50px;border-top:1px solid var(--line);margin-top:30px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#211d43;border:1px solid #9585ff66;padding:12px 17px;border-radius:12px;box-shadow:var(--shadow);z-index:10;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}.hidden{display:none!important}
+body[data-mood="prosperous"]{--mood-a:#253b70;--mood-b:#124b4b}body[data-mood="stable"]{--mood-a:#211653;--mood-b:#081d35}body[data-mood="unrest"]{--mood-a:#542348;--mood-b:#311d49}body[data-mood="collapse"]{--mood-a:#4b182d;--mood-b:#25111c}body[data-mood="recovery"]{--mood-a:#174a46;--mood-b:#172b50}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:35px;gap:0}.hero-copy{text-align:center}.hero-copy p{margin:auto}.actions{justify-content:center}.globe-stage{height:370px}.grid.three{grid-template-columns:1fr 1fr}.nav{display:none}.grid.two{grid-template-columns:1fr}}
+@media(max-width:520px){.wrap{width:min(100% - 24px,1180px)}.topbar{padding:13px 0}.hero-copy h1{font-size:48px}.globe-stage{height:320px}.globe{width:260px}.orbit{width:320px;height:120px}.orbit.two{width:300px;height:140px}.tag-a{right:-3px;top:25px}.tag-b{left:-3px;bottom:20px}.grid.three{grid-template-columns:1fr}.section{padding:25px 0}.card{padding:16px}.admin-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-mood="stable">
+<div class="wrap">
+<header class="topbar">
+<a class="brand" href="#"><span class="brand-mark">◉</span><span><strong>WORLIX</strong><small>ONE WORLD. INFINITE EXPERIMENTS.</small></span></a>
+<nav class="nav"><a href="#pulse">World Pulse</a><a href="#solo">Solo World</a><a href="#community">Community</a><a href="#news">Live News</a><a href="#admin">Admin</a></nav>
+<span class="status-pill"><i class="pulse-dot"></i><span id="connectionLabel">WORLD SIMULATION</span></span>
+</header>
 
+<main>
+<section class="hero">
+<div class="hero-copy">
+<span class="eyebrow">✦ A living world shaped by you</span>
+<h1>One World.<br><span>Infinite Experiments.</span></h1>
+<p>Every choice leaves a mark. Build, protect, disrupt or rebuild. Enter a world that remembers what its people do — and discovers what comes next.</p>
+<div class="actions"><a class="btn primary" href="#community">🌐 Enter the Community</a><a class="btn" href="#solo">⚡ Start Solo Journey</a></div>
+<div class="micro">No account needed to begin your solo experiment.</div>
+</div>
+<div class="globe-stage" aria-label="Illustrated glowing planet">
+<div class="globe-halo"></div><div class="orbit"></div><div class="orbit two"></div>
+<div class="globe"><i class="land one"></i><i class="land two"></i><i class="land three"></i><i class="city c1"></i><i class="city c2"></i><i class="city c3"></i></div>
+<div class="float-tag tag-a">WORLD STATUS <b id="heroMood">STABLE</b></div><div class="float-tag tag-b">✧ <b id="heroPulse">Awaiting signals</b></div>
+</div>
+</section>
+
+<section id="pulse" class="section">
+<div class="section-head"><div><span class="eyebrow">01 / World intelligence</span><h2>WORLD PULSE</h2><p>A snapshot of the shared world's current condition.</p></div><span class="tag" id="dataMode">DEMO MODE · NOT LIVE DATA</span></div>
+<div class="grid three">
+<div class="card"><div class="card-top"><div><p>Global condition</p><div class="metric mood-label" id="moodText">Stable</div></div><span class="icon">🌎</span></div><p id="moodDescription">The world is holding its balance. Its next chapter is unwritten.</p></div>
+<div class="card"><div class="card-top"><div><p>World resilience</p><span class="metric" id="resilience">68<small> / 100</small></span></div><span class="icon">🛡️</span></div><div class="bar"><span id="resilienceBar" style="width:68%"></span></div><p>Illustrative starting value until Supabase is connected.</p></div>
+<div class="card"><div class="card-top"><div><p>World harmony</p><span class="metric" id="harmony">54<small> / 100</small></span></div><span class="icon">✨</span></div><div class="bar"><span id="harmonyBar" style="width:54%"></span></div><p>Shared indicators will be authoritative after backend setup.</p></div>
+</div>
+</section>
+
+<section id="solo" class="section">
+<div class="section-head"><div><span class="eyebrow">02 / Your private timeline</span><h2>SOLO WORLD</h2><p>Your own evolving experiment, saved on this device.</p></div><span class="tag">LOCAL SAVE</span></div>
+<div class="grid two">
+<div class="card"><div class="card-top"><div><h3>Choose your next move</h3><p>Small decisions can create unexpected futures.</p></div><span class="icon">🧭</span></div>
+<div class="metric" id="soloDay">Day 1</div><p id="soloNarrative">A quiet dawn breaks over the valley. Your settlement waits for its first decision.</p>
+<div class="choice-list" id="soloChoices">
+<button class="choice" data-solo="green"><span>🌱 Restore the ancient forest<small>Invest in long-term resilience.</small></span><span class="risk">+Balance</span></button>
+<button class="choice" data-solo="industry"><span>🏭 Open a fast industrial corridor<small>Rapid growth, environmental cost.</small></span><span class="risk">High risk</span></button>
+<button class="choice" data-solo="research"><span>🔬 Fund a research collective<small>Slow progress, uncertain reward.</small></span><span class="risk">Unknown</span></button>
+</div><div class="notice">Solo progress is stored in this browser using localStorage. Clearing browser data resets this timeline.</div></div>
+<div class="card"><div class="card-top"><h3>Your world ledger</h3><span class="icon">📜</span></div><div class="grid two"><div><p>Resilience</p><div class="metric" id="soloRes">60</div></div><div><p>Prosperity</p><div class="metric" id="soloPros">45</div></div></div><div class="bar"><span id="soloResBar" style="width:60%"></span></div><p id="soloLog" class="muted">No decisions recorded yet. Your story starts now.</p><button class="btn" id="resetSolo">↻ Reset solo world</button></div>
+</div>
+</section>
+
+<section id="community" class="section">
+<div class="section-head"><div><span class="eyebrow">03 / One shared destiny</span><h2>WORLD COMMUNITY</h2><p>One daily decision per player. The collective outcome shapes the world.</p></div><span class="tag" id="voteStatus">BACKEND NOT CONNECTED</span></div>
+<div class="grid two">
+<div class="card"><div class="card-top"><div><h3>Today's world decision</h3><p id="communityPrompt">The world's energy network is failing. What should humanity prioritise?</p></div><span class="icon">⚖️</span></div>
+<div class="choice-list" id="communityChoices">
+<button class="choice" data-vote="renew"><span>☀️ Rebuild with clean energy<small>Safer future, slower immediate recovery.</small></span><span class="risk">Constructive</span></button>
+<button class="choice" data-vote="extract"><span>⛏️ Extract emergency resources<small>Fast supply, long-term ecological damage.</small></span><span class="risk">Risky</span></button>
+<button class="choice" data-vote="ration"><span>💧 Enforce a global ration plan<small>Protect reserves, strain public trust.</small></span><span class="risk">Difficult</span></button>
+</div>
+<p class="muted" id="voteMessage">Connect Supabase and apply the SQL setup before real voting is enabled. These choices are previews only.</p>
+</div>
+<div class="card"><div class="card-top"><h3>Collective signals</h3><span class="icon">📡</span></div><div class="metric" id="participantCount">— <small>verified participants</small></div><p>Participant totals appear only when returned by the database.</p><div class="bar"><span id="communityBar" style="width:0%"></span></div><div id="communityResult" class="muted">No verified votes loaded.</div><div class="notice">No fabricated votes, player counts or global outcomes are displayed. Demo indicators above are clearly labelled illustrative.</div></div>
+</div>
+</section>
+
+<section id="news" class="section">
+<div class="section-head"><div><span class="eyebrow">04 / Signals from the world</span><h2>WORLD LIVE NEWS</h2><p>Fictional in-world reports. Real community outcomes will be labelled when connected.</p></div><span class="tag">FICTIONAL WORLD FEED</span></div>
+<div class="grid two"><div class="card"><div class="card-top"><h3>Latest transmissions</h3><span class="icon">📻</span></div><div id="newsFeed">
+<div class="news-item"><span class="news-icon">🌌</span><div><strong>ANOMALOUS LIGHTS OVER THE NORTHERN SEA</strong><small>Fictional world event · The observatory has requested volunteers.</small></div></div>
+<div class="news-item"><span class="news-icon">🌾</span><div><strong>SEED VAULT DISCOVERED BENEATH OLD CITY</strong><small>Fictional world event · Scientists believe the archive predates the last collapse.</small></div></div>
+<div class="news-item"><span class="news-icon">⚡</span><div><strong>GRID RESTORATION CREWS REACH THE EASTERN RIDGE</strong><small>Fictional world event · Recovery operation continues.</small></div></div>
+</div></div>
+<div class="card"><div class="card-top"><h3>World memory</h3><span class="icon">🧠</span></div><p>The world remembers turning points, not just scores.</p><div class="news-item"><span class="news-icon">📖</span><div><strong>THE FIRST SIGNAL</strong><small>Every civilisation begins with a choice. The archive is waiting for its first verified chapter.</small></div></div><div class="news-item"><span class="news-icon">🔐</span><div><strong>THE HIDDEN ARCHIVE</strong><small>Unknown civilisation · Classified discovery · Fictional storyline.</small></div></div></div></div>
+</section>
+
+<section id="leaders" class="section">
+<div class="section-head"><div><span class="eyebrow">05 / Names written in history</span><h2>WORLD LEGACY</h2><p>Aliases only. Rankings will be populated from verified backend records.</p></div></div>
+<div class="grid two"><div class="card"><h3>🛡️ World restorers</h3><p>Players who helped protect or rebuild the world.</p><div class="muted">No verified leaderboard data yet.</div></div><div class="card"><h3>⚠️ Agents of disruption</h3><p>Players whose choices increased global instability.</p><div class="muted">No verified leaderboard data yet.</div></div></div>
+</section>
+
+<section id="admin" class="section">
+<div class="section-head"><div><span class="eyebrow">06 / Restricted access</span><h2>WORLIX ADMIN — WORLD CONTROL CENTER</h2><p>Administrative controls are disabled until secure Supabase authentication and database policies are configured.</p></div><span class="tag">SERVER-SECURED</span></div>
+<div class="card"><div class="card-top"><div><h3>Administrator gateway</h3><p>Never enter an admin password into this static page. Authenticate through Supabase Auth after setup.</p></div><span class="icon">🔐</span></div>
+<div class="admin-grid"><div><label class="muted" for="adminEmail">Admin email</label><input class="field" id="adminEmail" type="email" autocomplete="username" placeholder="admin@example.com"><label class="muted" for="adminPassword">Password</label><input class="field" id="adminPassword" type="password" autocomplete="current-password" placeholder="Supabase Auth password"><button class="btn primary" id="adminLogin">Sign in securely</button></div><div><p id="adminStatus" class="notice">Admin controls are locked. Configure Supabase URL/key and promote your own Auth user to admin using the SQL instructions before signing in.</p><div id="adminControls" class="hidden"><label class="muted">Set world mood</label><select id="adminMood" class="field"><option value="stable">Stable</option><option value="prosperous">Prosperous</option><option value="unrest">Unrest</option><option value="collapse">Collapse</option><option value="recovery">Recovery</option></select><button class="btn gold" id="saveMood">Apply mood</button></div></div></div>
+</div>
+</section>
+</main>
+<footer class="footer"><div><strong>WORLIX</strong><br>One World. Infinite Experiments.</div><div>Fictional simulation. Real shared-world data will be shown only after verified backend connection.</div><div>© <span id="year"></span> WORLIX</div></footer>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* WORLIX CONFIG — replace only after creating your Supabase project.
+   The anon/publishable key is designed for browser use with correct RLS.
+   NEVER place a service_role key here. */
+const WORLIX_CONFIG = { supabaseUrl: "", supabaseAnonKey: "" };
+let supabaseClient = null;
+const $ = (id) => document.getElementById(id);
+const toast = (message) => { const el=$("toast"); el.textContent=message; el.classList.add("show"); setTimeout(()=>el.classList.remove("show"),3000); };
+const moods = {
+ prosperous:["Prosperous","The world is thriving. Cooperation and discovery are accelerating."],
+ stable:["Stable","The world is holding its balance. Its next chapter is unwritten."],
+ unrest:["Unrest","Pressure is rising. Communities are divided and resources are strained."],
+ collapse:["Collapse","Critical systems are failing. Survival and rebuilding are now urgent."],
+ recovery:["Recovery","People are rebuilding. Hope is returning, one careful step at a time."]
+};
+function setMood(mood){
+ const valid=Object.prototype.hasOwnProperty.call(moods,mood)?mood:"stable";
+ document.body.dataset.mood=valid; $("moodText").textContent=moods[valid][0]; $("moodDescription").textContent=moods[valid][1]; $("heroMood").textContent=moods[valid][0].toUpperCase();
+}
+function getSolo(){try{return JSON.parse(localStorage.getItem("wor lix_solo")||"null")||{day:1,resilience:60,prosperity:45,log:[]};}catch{return {day:1,resilience:60,prosperity:45,log:[]};}}
+function saveSolo(s){localStorage.setItem("wor lix_solo",JSON.stringify(s));renderSolo();}
+function renderSolo(){
+ const s=getSolo(); $("soloDay").textContent="Day "+s.day; $("soloRes").textContent=s.resilience; $("soloPros").textContent=s.prosperity; $("soloResBar").style.width=s.resilience+"%";
+ $("soloLog").textContent=s.log.length?s.log[s.log.length-1]:"No decisions recorded yet. Your story starts now.";
+ $("soloNarrative").textContent=s.day===1?"A quiet dawn breaks over the valley. Your settlement waits for its first decision.":"Day "+s.day+" begins. The consequences of your past choices are taking shape.";
+}
+document.querySelectorAll("[data-solo]").forEach(btn=>btn.addEventListener("click",()=>{
+ const s=getSolo(),choice=btn.dataset.solo; let message="";
+ if(choice==="green"){s.resilience=Math.min(100,s.resilience+8);s.prosperity=Math.max(0,s.prosperity+2);message="You restored a stretch of ancient forest. The land is beginning to breathe again.";}
+ if(choice==="industry"){s.prosperity=Math.min(100,s.prosperity+12);s.resilience=Math.max(0,s.resilience-9);message="The industrial corridor brought rapid wealth — but the river darkened downstream.";}
+ if(choice==="research"){s.resilience=Math.min(100,s.resilience+4);s.prosperity=Math.min(100,s.prosperity+5);message="Researchers uncovered a promising energy pattern. Its full potential remains unknown.";}
+ s.day++;s.log.push(message);saveSolo(s);toast("Your solo world has changed.");
+}));
+$("resetSolo").addEventListener("click",()=>{if(confirm("Reset your solo world on this device?")){localStorage.removeItem("wor lix_solo");renderSolo();toast("Solo world reset.");}});
+$("year").textContent=new Date().getFullYear();renderSolo();setMood("stable");
+$("heroPulse").textContent="Awaiting signals";
+
+async function connectBackend(){
+ const url=WORLIX_CONFIG.supabaseUrl, key=WORLIX_CONFIG.supabaseAnonKey;
+ if(!url||!key){$("connectionLabel").textContent="WORLD SIMULATION";return;}
+ if(!window.supabase){$("connectionLabel").textContent="LIBRARY ERROR";return;}
+ try{
+  supabaseClient=window.supabase.createClient(url,key);
+  $("connectionLabel").textContent="CONNECTING";
+  const {data,error}=await supabaseClient.from("world_state").select("*").eq("id",1).single();
+  if(error)throw error;
+  $("connectionLabel").textContent="WORLD ONLINE";$("dataMode").textContent="LIVE DATABASE";$("voteStatus").textContent="CONNECTED";
+  $("participantCount").innerHTML="Live <small>database connection</small>";
+  $("resilience").innerHTML=Number(data.resilience)+"<small> / 100</small>";$("resilienceBar").style.width=data.resilience+"%";
+  $("harmony").innerHTML=Number(data.harmony)+"<small> / 100</small>";$("harmonyBar").style.width=data.harmony+"%";setMood(data.mood);
+  await loadNews();
+ }catch(err){$("connectionLabel").textContent="BACKEND ERROR";$("dataMode").textContent="CONNECTION ERROR";console.error("WORLIX backend:",err);$("voteMessage").textContent="Database connection failed. Check the Supabase URL, anon key and SQL setup."; }
+}
+async function loadNews(){
+ const {data,error}=await supabaseClient.from("world_news").select("title,body,created_at,is_fictional").order("created_at",{ascending:false}).limit(5);
+ if(error)throw error;if(!data.length)return;
+ $("newsFeed").innerHTML=data.map(n=>`<div class="news-item"><span class="news-icon">📡</span><div><strong>${escapeHtml(n.title)}</strong><small>${n.is_fictional?"Fictional world event":"World update"} · ${escapeHtml(n.body)}</small></div></div>`).join("");
+}
+function escapeHtml(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+document.querySelectorAll("[data-vote]").forEach(btn=>btn.addEventListener("click",async()=>{
+ if(!supabaseClient){toast("Community voting is not active yet. Connect Supabase first.");return;}
+ btn.disabled=true;
+ try{
+  let {data:{user},error:authError}=await supabaseClient.auth.getUser();
+  if(authError)throw authError;
+  if(!user){const result=await supabaseClient.auth.signInAnonymously();if(result.error)throw result.error;user=result.data.user;}
+  const {data,error}=await supabaseClient.rpc("cast_daily_vote",{p_option_code:btn.dataset.vote});
+  if(error)throw error;
+  $("voteMessage").textContent=data?.message||"Your vote has been recorded.";toast("Vote submitted.");
+ }catch(err){$("voteMessage").textContent=err.message||"Vote could not be submitted.";toast("Vote not recorded.");}
+ finally{btn.disabled=false;}
+}));
+$("adminLogin").addEventListener("click",async()=>{
+ if(!supabaseClient){$("adminStatus").textContent="Supabase is not configured.";return;}
+ const email=$("adminEmail").value.trim(),password=$("adminPassword").value;
+ if(!email||!password){$("adminStatus").textContent="Enter your Supabase Auth email and password.";return;}
+ const {data,error}=await supabaseClient.auth.signInWithPassword({email,password});
+ if(error){$("adminStatus").textContent=error.message;return;}
+ const {data:profile,error:profileError}=await supabaseClient.from("profiles").select("role").eq("id",data.user.id).single();
+ if(profileError||profile?.role!=="admin"){await supabaseClient.auth.signOut();$("adminStatus").textContent="This account does not have administrator privileges.";return;}
+ $("adminStatus").textContent="Authenticated as administrator."; $("adminControls").classList.remove("hidden");toast("Admin session verified.");
+});
+$("saveMood").addEventListener("click",async()=>{
+ if(!supabaseClient)return;const mood=$("adminMood").value;
+ const {error}=await supabaseClient.rpc("admin_set_world_mood",{p_mood:mood,p_reason:"Mood changed from WORLIX Admin Control Center"});
+ if(error){toast("Update rejected: "+error.message);return;}setMood(mood);toast("World mood updated and logged.");
+});
+connectBackend();
+</script>
+</body>
+</html>
