@@ -801,7 +801,7 @@
         </div>
         
         <p class="decision-story" id="comm-story-text">
-          تواجه المدن الكبرى أزمة طاقة غير مسبوقة بسبب التوسع السريع في الذكاء الاصطناعي. العلماء يقترحون بناء مفاعلات اندماج نوي مجاورة للمناطق السكنية لتسريع التزويد، بينما يطالب البيئيون بتقنين الاستهلاك.
+          تواجه المدن الكبرى أزمة طاقة غير مسبوقة بسبب التوسع السريع في الذكاء الاصطناعي. العلماء يقترحون بناء مفاعلات اندماج نووي مجاورة للمناطق السكنية لتسريع التزويد، بينما يطالب البيئيون بتقنين الاستهلاك.
         </p>
 
         <div class="choices-grid" id="comm-choices-container">
@@ -810,7 +810,7 @@
               <span>تفعيل مفاعلات الاندماج الفوري</span>
               <span class="risk-tag danger">مخاطرة عالية (60%)</span>
             </div>
-            <div class="choice-desc">زيادة هائلة في الطاقة والتقدم التكنولوجي (+15%) ولكن قد تؤدي لخطورة تسرب نوي أو تلوث.</div>
+            <div class="choice-desc">زيادة هائلة في الطاقة والتقدم التكنولوجي (+15%) ولكن قد تؤدي لخطورة تسرب نووي أو تلوث.</div>
           </button>
 
           <button class="choice-btn" onclick="castCommunityVote(2)">
@@ -900,7 +900,7 @@
       <!-- تسجيل دخول المدير -->
       <div id="admin-auth-sec" class="admin-box">
         <h5>تسجيل الدخول الإداري (Supabase Auth)</h5>
-        <input type="email" id="admin-email" class="admin-input" placeholder="البريد الإلكتروني للآدمين">
+        <input type="email" id="admin-email" class="admin-input" value="aliuomran@gmail.com" placeholder="البريد الإلكتروني للآدمين">
         <input type="password" id="admin-pass" class="admin-input" placeholder="كلمة المرور">
         <button class="admin-btn" onclick="handleAdminLogin()">دخول لوحة التحكم</button>
       </div>
@@ -951,6 +951,8 @@
     /* ==========================================
        1. الإعدادات العامة والحالة (State Engine)
        ========================================== */
+    const ADMIN_EMAIL = "aliuomran@gmail.com";
+
     const state = {
       currentTab: 'community',
       mood: 'stable', // thriving, stable, disturbed, collapsed, recovering
@@ -979,7 +981,7 @@
       {
         id: 2,
         isRiskHigh: false, // 40%
-        story: "اكتشف العلماء نباتاً نادر يمتص التلوث الكربوني بسرعة مضاعفة 100 مرة ويحسن سلامة الغلاف الجوي.",
+        story: "اكتشف العلماء نباتاً نادراً يمتص التلوث الكربوني بسرعة مضاعفة 100 مرة ويحسن سلامة الغلاف الجوي.",
         optionA: { text: "زراعته عالمياً بدعم حكومي مكثف", risk: "زيادة السلامة البيئية (+20%) وازدهار الطبيعة." },
         optionB: { text: "استغلاله تجارياً لصناعة الأدوية", risk: "نمو اقتصادي (+10%) مع فوائد بيئية متوسطة." }
       },
@@ -1099,7 +1101,7 @@
         ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
         ctx.clip();
 
-        // خطوط الطول والعرص
+        // خطوط الطول والعرض
         ctx.strokeStyle = 'rgba(0, 242, 254, 0.12)';
         ctx.lineWidth = 1;
 
@@ -1313,15 +1315,14 @@
     }
 
     function handleAdminLogin() {
-      const email = document.getElementById('admin-email').value;
+      const email = document.getElementById('admin-email').value.trim().toLowerCase();
       const pass = document.getElementById('admin-pass').value;
 
-      if (email && pass) {
-        // سيتم ربطها بـ Supabase Auth الحقيقي في المرحلة الثانية
+      if (email === ADMIN_EMAIL.toLowerCase() && pass) {
         document.getElementById('admin-auth-sec').style.display = 'none';
         document.getElementById('admin-controls-sec').style.display = 'grid';
       } else {
-        alert("يرجى إدخال البريد وكلمة المرور الخاصة بالإدارة.");
+        alert("عذراً، البريد الإلكتروني غير مصرح له بفتح لوحة الإدارة أو كلمة المرور فارغة.");
       }
     }
 
